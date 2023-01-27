@@ -22,14 +22,12 @@ function App() {
   const twitter = async () => {
     await magic.oauth.loginWithRedirect({
       provider: 'twitter' /* 'google', 'facebook', 'apple', or 'github' */,
-      redirectURI: 'http://localhost:3000/',
+      redirectURI: 'https://pruebamagiclink.netlify.app',
       // scope: ['user:email'] /* optional */,
     });
-  }
-
-  const dataUser = async () => {
-    const result = await magic.oauth.getRedirectResult();
-    console.log(result)
+   
+    // const result = await magic.oauth.getRedirectResult();
+    // console.log(result)
   }
 
   // const data = async () => {
@@ -59,7 +57,6 @@ function App() {
      {<button onClick={()=>data()}>data</button>}
     {<button onClick={()=> Logout()}>logout</button>} */}
     {<button onClick={()=> twitter() }>twitter</button>}
-    {<button onClick={()=> dataUser() }>data</button>}
     </div>
   );
 }
