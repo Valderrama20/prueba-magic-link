@@ -15,7 +15,7 @@ import './App.css';
 function App() {
   const m = new Magic('pk_live_5AAEAC4E3D514B5B'); // ✨
 
-  const magic = new Magic('YOUR_API_KEY', {
+  const magic = new Magic('pk_live_5AAEAC4E3D514B5B', {
     extensions: [new OAuthExtension()],
   });
 
