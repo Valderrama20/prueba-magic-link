@@ -22,7 +22,7 @@ function App() {
   const twitter = async () => {
     await magic.oauth.loginWithRedirect({
       provider: 'twitter' /* 'google', 'facebook', 'apple', or 'github' */,
-      redirectURI: 'https://auth.magic.link/v1/oauth2/y7sxrJKbPDnSvfcRfAZoTPu7vJwveTcDVUVwa1NPrUQ=/callback',
+      redirectURI: 'https://pruebamagiclink.netlify.app/oauth2/y7sxrJKbPDnSvfcRfAZoTPu7vJwveTcDVUVwa1NPrUQ=/callback',
       // scope: ['user:email'] /* optional */,
     });
    
