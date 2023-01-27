@@ -4,11 +4,11 @@ import { OAuthExtension } from '@magic-ext/oauth';
 import './App.css';
 
 // API Key 
-// jR7HsEfg2VMb7janAx3jqbGMC
+// 5Z95PXDJ7VUGaYcQfIUug5Z8J
 // API Key Secret
-// cpN2WI8MpJyujPiYVax4NII8zHRGeUNw4wLvq7m5AvKWQoI19u
+// 29JrHuh2KrmVg0LkV1Flh5GAeMF0t7aU6xVUKgGGk0hstdxEcG
 // Bearer Token
-// AAAAAAAAAAAAAAAAAAAAABDrlQEAAAAAPZtsCC34DFrqHk%2BF52VFb9RHCqo%3DnvzLNQXpPdV6i1eEzyJMNNVGRo9ToDBWd7nn6UVWue5vITwePS
+// AAAAAAAAAAAAAAAAAAAAAMfvlQEAAAAATzxclIpjqBQESfQ7mcruHA4NDWY%3DjzGQM7OwHMP0FphUwKkZSQlK4KiYajlHK5AvHKEvsOwbOIzUZK
 // redirect
 // https://auth.magic.link/v1/oauth2/y7sxrJKbPDnSvfcRfAZoTPu7vJwveTcDVUVwa1NPrUQ=/callback
 
@@ -22,12 +22,14 @@ function App() {
   const twitter = async () => {
     await magic.oauth.loginWithRedirect({
       provider: 'twitter' /* 'google', 'facebook', 'apple', or 'github' */,
-      redirectURI: 'https://pruebamagiclink.netlify.app/oauth2/y7sxrJKbPDnSvfcRfAZoTPu7vJwveTcDVUVwa1NPrUQ=/callback',
+      redirectURI: 'http://localhost:3000/',
       // scope: ['user:email'] /* optional */,
     });
-   
-    // const result = await magic.oauth.getRedirectResult();
-    // console.log(result)
+  }
+
+  const dataUser = async () => {
+    const result = await magic.oauth.getRedirectResult();
+    console.log(result)
   }
 
   // const data = async () => {
@@ -57,6 +59,7 @@ function App() {
      {<button onClick={()=>data()}>data</button>}
     {<button onClick={()=> Logout()}>logout</button>} */}
     {<button onClick={()=> twitter() }>twitter</button>}
+    {<button onClick={()=> dataUser() }>data</button>}
     </div>
   );
 }
