@@ -4,16 +4,16 @@ import { OAuthExtension } from '@magic-ext/oauth';
 import './App.css';
 
 // API Key 
-// zGUVICztAGLOJhozlAeXEgHKI
+// jR7HsEfg2VMb7janAx3jqbGMC
 // API Key Secret
-// dSlUhSHue52XgyGALaqHAFgXZAkjIwq0rqYSeh4UBErE5nJNKm
+// cpN2WI8MpJyujPiYVax4NII8zHRGeUNw4wLvq7m5AvKWQoI19u
 // Bearer Token
-// AAAAAAAAAAAAAAAAAAAAAOPflQEAAAAAalGuCNFkZb6bY76716jSR1kLYRQ%3DfUsufwuNTzBvAodcNsZ3ixCajmv7v4dkv9EuwHPFzJmvP1RNGU
+// AAAAAAAAAAAAAAAAAAAAABDrlQEAAAAAPZtsCC34DFrqHk%2BF52VFb9RHCqo%3DnvzLNQXpPdV6i1eEzyJMNNVGRo9ToDBWd7nn6UVWue5vITwePS
 // redirect
 // https://auth.magic.link/v1/oauth2/y7sxrJKbPDnSvfcRfAZoTPu7vJwveTcDVUVwa1NPrUQ=/callback
 
 function App() {
-  const m = new Magic('pk_live_5AAEAC4E3D514B5B'); // ✨
+  // const m = new Magic('pk_live_5AAEAC4E3D514B5B'); // ✨
 
   const magic = new Magic('pk_live_5AAEAC4E3D514B5B', {
     extensions: [new OAuthExtension()],
@@ -25,8 +25,9 @@ function App() {
       redirectURI: 'https://auth.magic.link/v1/oauth2/y7sxrJKbPDnSvfcRfAZoTPu7vJwveTcDVUVwa1NPrUQ=/callback',
       // scope: ['user:email'] /* optional */,
     });
-    const result = await magic.oauth.getRedirectResult();
-    console.log(result)
+   
+    // const result = await magic.oauth.getRedirectResult();
+    // console.log(result)
   }
 
   // const data = async () => {
