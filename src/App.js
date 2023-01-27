@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import { Magic } from 'magic-sdk';
 import { OAuthExtension } from '@magic-ext/oauth';
 import './App.css';
@@ -40,10 +40,6 @@ function App() {
     
 
   // }
-
-  // const render = async () => {
-       
-  // };
 
   // const Login = async e => {
   //   e.preventDefault()
