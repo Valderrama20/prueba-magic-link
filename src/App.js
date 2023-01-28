@@ -29,9 +29,8 @@ function App() {
   }
  
   const dataUser = async () => {
-    const isLoggedIn = await magic.user.isLoggedIn()
-    // const result = await magic.oauth.getRedirectResult();
-    console.log(isLoggedIn)
+    const result = await magic.oauth.getRedirectResult();
+    console.log(result)
   }
   // const data = async () => {
   //   const isLoggedIn = await m.user.isLoggedIn();
