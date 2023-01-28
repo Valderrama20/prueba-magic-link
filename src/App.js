@@ -29,7 +29,7 @@ function App() {
   }
  
   const dataUser = async () => {
-    const isLoggedIn = await m.user.isLoggedIn()
+    const isLoggedIn = await magic.user.isLoggedIn()
     // const result = await magic.oauth.getRedirectResult();
     console.log(isLoggedIn)
   }
