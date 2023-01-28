@@ -26,10 +26,13 @@ function App() {
       // scope: ['user:email'] /* optional */,
     });
    
-    // const result = await magic.oauth.getRedirectResult();
-    // console.log(result)
   }
-
+ 
+  const dataUser = async () => {
+    const isLoggedIn = await m.user.isLoggedIn()
+    // const result = await magic.oauth.getRedirectResult();
+    console.log(isLoggedIn)
+  }
   // const data = async () => {
   //   const isLoggedIn = await m.user.isLoggedIn();
   //   if(isLoggedIn) {
@@ -57,6 +60,7 @@ function App() {
      {<button onClick={()=>data()}>data</button>}
     {<button onClick={()=> Logout()}>logout</button>} */}
     {<button onClick={()=> twitter() }>twitter</button>}
+    {<button onClick={()=> dataUser() }>data</button>}
     </div>
   );
 }
